@@ -155,8 +155,12 @@
 	path = fonts/JetBrainsMono
 	url = https://github.com/JetBrains/JetBrainsMono
 	ignore = dirty
-[submodule "vim/pack/bundle/start/vim-lsp-cxx-highlight"]
+[submodule "vim/pack/vimonly/vim-lsp-cxx-highlight"]
 	path = vim/pack/vimonly/vim-lsp-cxx-highlight
+	url = https://github.com/jackguo380/vim-lsp-cxx-highlight
+	ignore = dirty
+[submodule "vim/pack/bundle/start/vim-lsp-cxx-highlight"]
+	path = vim/pack/bundle/start/vim-lsp-cxx-highlight
 	url = https://github.com/jackguo380/vim-lsp-cxx-highlight
 	ignore = dirty
 ; [submodule "42/norminettev1"]
@@ -331,7 +335,7 @@
 	url = https://github.com/rbong/vim-flog
 	ignore = dirty
 [submodule "/home/trx/dotfiles/vim/pack/bundle/start/copilot.vim"]
-	path = /home/trx/dotfiles/vim/pack/bundle/start/copilot.vim
+	path = vim/pack/bundle/start/copilot.vim
 	url = https://github.com/github/copilot.vim
 [submodule "nvim/pack/bundle/start/null-ls.nvim"]
 	path = nvim/pack/bundle/start/null-ls.nvim
@@ -343,5 +347,5 @@
 	path = nvim/pack/bundle/start/noice.nvim
 	url = https://github.com/folke/noice.nvim
 [submodule "/home/trx/dotfiles/vim/pack/bundle/start/nvim-tmux-navigation"]
-	path = /home/trx/dotfiles/vim/pack/bundle/start/nvim-tmux-navigation
+	path = vim/pack/bundle/start/nvim-tmux-navigation
 	url = https://github.com/alexghergh/nvim-tmux-navigation
