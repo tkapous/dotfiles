@@ -8,6 +8,8 @@
 --border=none
 --color=16
 --height=10
+--bind 'tab:toggle+down'
+--bind 'ctrl-space:toggle'
 --bind 'alt-h:backward-char'
 --bind 'alt-j:down'
 --bind 'alt-k:up'

@@ -115,6 +115,8 @@ source "$DOT/shells/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$DOT/shells/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
 source "$DOT/shells/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 source "$DOT/shells/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
+zstyle ':fzf-tab:*' use_fzf_default_opts yes
+zstyle ':fzf-tab:*' fzf-flags --bind="tab:toggle+down,ctrl-space:toggle,alt-h:backward-char,alt-j:down,alt-k:up,alt-l:forward-char,ctrl-a:select-all"
 
 ## starship
 eval "$(starship init zsh)"
