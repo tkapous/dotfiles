@@ -15,7 +15,7 @@ fi
 
 export SUDO_ASKPASS=/usr/lib/ssh/gnome-ssh-askpass4
 export EDITOR=nvim
-export BROWSER=firefox
+export BROWSER=zen-browser
 
 # export JAVA_HOME=/usr/lib/jvm/java-19-openjdk
 export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
