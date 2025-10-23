@@ -28,7 +28,7 @@ bind index,pager \CO sidebar-open
 # bind index,pager \CP sidebar-page-up
 # bind index,pager \CU sidebar-page-down
 
-source ~/dotfiles/mutt/dracula.muttrc
+source $DOT/mutt/dracula.muttrc
 
 # Default color definitions
 # color normal     white         default

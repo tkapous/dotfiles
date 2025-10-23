@@ -3,7 +3,7 @@ setlocal path+=inc,incs,includes,include,src,sources,source
 
 function! s:insertMakefileSkel() abort
   try
-    let skeleton = '$HOME/dotfiles/vim/skel/skel.makefile'
+    let skeleton = '$DOT/vim/skel/skel.makefile'
     " Remove the 'a' option - prevents the name of the
     " alternate file being overwritten with a :read command
     let cpoptions_save = &cpoptions

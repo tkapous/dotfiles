@@ -1,9 +1,6 @@
 #!/bin/bash
 
-DOTPATH=~/dotfiles
-echo $DOTPATH
-
-cd $DOTPATH
+cd $DOT
 if [ $# == 1 ]
 then
 	git commit -am "$1"

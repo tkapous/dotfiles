@@ -2,11 +2,10 @@
 
 # links files from SRC to their provided LINK
 
-DOTFILESPATH=$HOME
 GITURL=https://github.com/Biggybi/dotfiles
-SRC=$DOTFILESPATH/dotfiles
+SRC=$DOT
 DST=$HOME
-BACKUP=$DOTFILESPATH/dotfiles/dots_back
+BACKUP=$DOT/dots_back
 
 TEST=0
 if [ $TEST == 1 ]; then

@@ -24,7 +24,7 @@ filetype on
 filetype indent on                   " use indent plugin
 set keywordprg=:Man
 
-let $BASH_ENV = "$HOME/dotfiles/bash_aliases"  " use aliases in vim
+let $BASH_ENV = "$DOT/bash_aliases"  " use aliases in vim
 let $PAGER=''                        " vim as pager
 
 syntax on

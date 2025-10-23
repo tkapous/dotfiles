@@ -1,6 +1,6 @@
 function! s:insertDektopEntrySkel() abort
   try
-    let path_to_skeletons = '$HOME/dotfiles/vim/skel/skel.desktop'
+    let path_to_skeletons = '$DOT/vim/skel/skel.desktop'
     " Remove the 'a' option - prevents the name of the
     " alternate file being overwritten with a :read command
     let cpoptions_save = &cpoptions

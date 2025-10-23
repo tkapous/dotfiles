@@ -8,7 +8,7 @@ setlocal errorformat^=,%Amake:\ ***\ [%f:%l:\ %.%#]%m
 
 function! s:insertCHHeader() abort
   try
-    let path_to_skeletons = '$HOME/dotfiles/vim/skel/skel_header.c'
+    let path_to_skeletons = '$DOT/vim/skel/skel_header.c'
     " Remove the 'a' option - prevents the name of the
     " alternate file being overwritten with a :read command
     let cpoptions_save = &cpoptions

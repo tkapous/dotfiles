@@ -242,23 +242,23 @@ alias printalpha='echo "abcdefghijklmnopqrstuvwxyz"'
 alias printnumber='echo "0123456789"'
 
 vimplugclone() {
-	git clone "$1" "$HOME/dotfiles/vim/pack/bundle/start/"
+	git clone "$1" "$DOT/vim/pack/bundle/start/"
 }
 
 vimplugremove() {
-	rm -rf "$HOME/dotfiles/vim/pack/bundle/start/$(basename "$1")"
+	rm -rf "$DOT/vim/pack/bundle/start/$(basename "$1")"
 }
 
 vimpluginstall() {
-	git submodule add -f "$1" "$HOME/dotfiles/vim/pack/bundle/start/$(basename "$1")"
+	git submodule add -f "$1" "$DOT/vim/pack/bundle/start/$(basename "$1")"
 }
 
 vimpluguninstall() {
-	git rm -f "$HOME/dotfiles/vim/pack/bundle/start/$(basename "$1")"
+	git rm -f "$DOT/vim/pack/bundle/start/$(basename "$1")"
 }
 
 nvimpluginstall() {
-	cd $HOME/dotfiles/nvim/pack/bundle/start/
+	cd $DOT/nvim/pack/bundle/start/
 	git clone $1
 }
 
@@ -266,48 +266,48 @@ gchub() {
 	git clone git@github.com:biggybi/$1
 }
 
-alias cdgninstall='cd $HOME/dotfiles/gnome_setup/'
-alias vigninstall='$VISUAL $HOME/dotfiles/gnome_setup/install.sh'
+alias cdgninstall='cd $DOT/gnome_setup/'
+alias vigninstall='$VISUAL $DOT/gnome_setup/install.sh'
 
-alias eb='$VISUAL $HOME/dotfiles/shells/bash/bashrc'
-alias ez='$VISUAL $HOME/dotfiles/shells/zsh/zshrc'
-alias ea='$VISUAL $HOME/dotfiles/shells/zsh/zsh_aliases'
+alias eb='$VISUAL $DOT/shells/bash/bashrc'
+alias ez='$VISUAL $DOT/shells/zsh/zshrc'
+alias ea='$VISUAL $DOT/shells/zsh/zsh_aliases'
 ## conflicts with eza program above
-# alias eza='$VISUAL $HOME/dotfiles/shells/zsh/zsh_aliases'
-alias ep='$VISUAL $HOME/dotfiles/shells/bash/bash_profile'
-alias eba='$VISUAL $HOME/dotfiles/shells/bash/bash_aliases'
-alias ev='$VISUAL $HOME/dotfiles/vim/vimrc'
+# alias eza='$VISUAL $DOT/shells/zsh/zsh_aliases'
+alias ep='$VISUAL $DOT/shells/bash/bash_profile'
+alias eba='$VISUAL $DOT/shells/bash/bash_aliases'
+alias ev='$VISUAL $DOT/vim/vimrc'
 alias ei='$VISUAL $HOME/.config/nvim/init.lua'
-alias en='$VISUAL $HOME/dotfiles/shells/bash/inputrc'
-alias et='$VISUAL $HOME/dotfiles/tmux/tmux.conf'
+alias en='$VISUAL $DOT/shells/bash/inputrc'
+alias et='$VISUAL $DOT/tmux/tmux.conf'
 alias eh='$VISUAL $HOME/.zsh_history'
 alias efs='$VISUAL /etc/fstab'
 alias eapt='sudo $VISUAL /etc/apt/sources.list'
 alias eg='sh .git/vimgit'
 alias ex='$VISUAL $HOME/.Xresources'
 
-alias vb='$VISUAL $HOME/dotfiles/shells/bash/bashrc'
-alias vz='$VISUAL $HOME/dotfiles/shells/zsh/zshrc'
-alias va='$VISUAL $HOME/dotfiles/shells/zsh/zsh_aliases'
-alias vza='$VISUAL $HOME/dotfiles/shells/zsh/zsh_aliases'
-alias vp='$VISUAL $HOME/dotfiles/shells/bash/bash_profile'
-alias vv='$VISUAL $HOME/dotfiles/vim/vimrc'
-alias vi='$VISUAL /home/trx/dotfiles/nvim/init.vim'
-alias vn='$VISUAL $HOME/dotfiles/shells/bash/inputrc'
-alias vt='$VISUAL $HOME/dotfiles/tmux/tmux.conf'
+alias vb='$VISUAL $DOT/shells/bash/bashrc'
+alias vz='$VISUAL $DOT/shells/zsh/zshrc'
+alias va='$VISUAL $DOT/shells/zsh/zsh_aliases'
+alias vza='$VISUAL $DOT/shells/zsh/zsh_aliases'
+alias vp='$VISUAL $DOT/shells/bash/bash_profile'
+alias vv='$VISUAL $DOT/vim/vimrc'
+alias vi='$VISUAL $DOT/nvim/init.vim'
+alias vn='$VISUAL $DOT/shells/bash/inputrc'
+alias vt='$VISUAL $DOT/tmux/tmux.conf'
 alias vh='$VISUAL $HOME/.zsh_history'
 alias vfs='$VISUAL /etc/fstab'
 alias vapt='sudo $VISUAL /etc/apt/sources.list'
 alias vg='$VISUAL $(./.git/vimgit)'
 alias vx='$VISUAL $HOME/.Xresources'
 
-alias vbashrc='$VISUAL $HOME/dotfiles/shells/bash/bashrc'
-alias valias='$VISUAL $HOME/dotfiles/shells/bash/bash_aliases'
-alias vzshrc='$VISUAL $HOME/dotfiles/shells/zsh/zshrc'
-alias vzalias='$VISUAL $HOME/dotfiles/shells/zsh/zsh_aliases'
-alias vimrc='$VISUAL $HOME/dotfiles/vim/vimrc'
-alias vinputrc='$VISUAL $HOME/dotfiles/shells/bash/inputrc'
-alias vitmux='$VISUAL $HOME/dotfiles/tmux/tmux.conf'
+alias vbashrc='$VISUAL $DOT/shells/bash/bashrc'
+alias valias='$VISUAL $DOT/shells/bash/bash_aliases'
+alias vzshrc='$VISUAL $DOT/shells/zsh/zshrc'
+alias vzalias='$VISUAL $DOT/shells/zsh/zsh_aliases'
+alias vimrc='$VISUAL $DOT/vim/vimrc'
+alias vinputrc='$VISUAL $DOT/shells/bash/inputrc'
+alias vitmux='$VISUAL $DOT/tmux/tmux.conf'
 alias vfstab='$VISUAL /etc/fstab'
 alias vapt='sudo $VISUAL /etc/apt/sources.list'
 alias vmgit='sh .git/vimgit'
@@ -318,8 +318,8 @@ alias scolor='eval "$(dircolors $HOME/.dircolors)"'
 alias salias='. $HOME/.bash_aliases'
 alias sinputrc='bind -f ~/.inputrc'
 alias stmux='tmux source-file $HOME/.tmux.conf'
-alias sxressources='xrdb ~/dotfiles/shells/xterm/Xresources'
-alias sx='xrdb ~/dotfiles/shells/xterm/Xresources'
+alias sxressources='xrdb $DOT/shells/xterm/Xresources'
+alias sx='xrdb $DOT/shells/xterm/Xresources'
 
 alias sb='. $HOME/.bashrc'
 alias sp='. $HOME/.bash_profile'
@@ -329,10 +329,10 @@ alias sn='bind -f ~/.inputrc'
 alias sall='. $HOME/.zshrc ; . $HOME/.zsh_aliases'
 alias st='tmux source-file $HOME/.tmux.conf'
 
-alias dot='cd $HOME/dotfiles'
-alias dvs='$VISUAL -S $HOME/dotfiles/.git/Session.vim'
-alias ds='$VISUAL -S $HOME/dotfiles/.git/Session.vim'
-alias dots='git -C $HOME/dotfiles status'
+alias dot='cd $DOT'
+alias dvs='$VISUAL -S $DOT/.git/Session.vim'
+alias ds='$VISUAL -S $DOT/.git/Session.vim'
+alias dots='git -C $DOT status'
 alias dotclh='git clone https://github.com/biggybi/dotfiles'
 alias dotcl='git clone git@github.com:Biggybi/dotfiles'
 alias dotssh='git clone git@github.com:Biggybi/dotfiles'

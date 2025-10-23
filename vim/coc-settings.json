@@ -1,72 +1,76 @@
 {
-	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": [ "c", "cpp", "objc", "objcpp" ],
-			"rootPatterns": [ ".ccls", ".git/compile_commands.json", ".vim/", ".git/", ".hg/" ],
-			"initializationOptions": {
-				"cache": { "directory": "/tmp/ccls" },
-				"highlight": { "lsRanges" : true }
-			}
-		},
-		"bash": {
-			"command": "bash-language-server",
-			"args": ["start"],
-			"filetypes": ["sh"],
-			"ignoredRootPaths": ["~"]
-		},
-		"groovy": {
-			"command": "java",
-			"args" : ["-jar", "/home/tris/dotfiles/langserver/groovy-language-server/build/libs/groovy-language-server.jar"],
-			"filetypes": ["groovy"]
-		},
-		"efm": {
-			"command": "efm-langserver",
-			"filetypes": ["vim", "eruby", "markdown", "lua"],
-			"args": ["-c", "/home/tris/dotfiles/langserver/efm-langserver/config.yaml"]
-		},
-		"haskell": {
-			"command": "hie-wrapper",
-			"args": ["--lsp"],
-			"rootPatterns": [
-				"*.cabal",
-				"stack.yaml",
-				"cabal.project",
-				"package.yaml"
-			],
-			"filetypes": [
-				"hs",
-				"lhs",
-				"haskell"
-			],
-			"initializationOptions": {
-				"languageServerHaskell": {
-				}
-			}
-		}
-	},
-	"eslint.options" : {
-		"env": {
-			"browser": true,
-			"node": true
-		}
-	},
-	"list.insertMappings": {
-		"<C-r>": "do:refresh",
-		"<C-f>": "feedkeys:\\<C-f>",
-		"<C-b>": "feedkeys:\\<C-b>",
-		"<C-j>": "normal:j",
-		"<C-k>": "normal:k",
-		"<C-t>": "action:tabe",
-		"<C-x>": "call:MyFunc",
-		"<C-v>": "eval:@@"
-	},
-	"suggest.noselect": true,
-	"coc.preferences.useQuickfixForLocations": true,
-	"suggest.echodocSupport": true,
-	"suggest.maxPreviewWidth": 80,
-	"suggest.maxCompleteItemCount": 20,
-	"sumneko-lua.enableNvimLuaDev": true,
-	"coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "lua"],
-	"Lua.telemetry.enable": false,
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        ".git/compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": { "directory": "/tmp/ccls" },
+        "highlight": { "lsRanges": true }
+      }
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
+    "groovy": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "$DOT/langserver/groovy-language-server/build/libs/groovy-language-server.jar"
+      ],
+      "filetypes": ["groovy"]
+    },
+    "efm": {
+      "command": "efm-langserver",
+      "filetypes": ["vim", "eruby", "markdown", "lua"],
+      "args": ["-c", "$DOT/langserver/efm-langserver/config.yaml"]
+    },
+    "haskell": {
+      "command": "hie-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "initializationOptions": {
+        "languageServerHaskell": {}
+      }
+    }
+  },
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "list.insertMappings": {
+    "<C-r>": "do:refresh",
+    "<C-f>": "feedkeys:\\<C-f>",
+    "<C-b>": "feedkeys:\\<C-b>",
+    "<C-j>": "normal:j",
+    "<C-k>": "normal:k",
+    "<C-t>": "action:tabe",
+    "<C-x>": "call:MyFunc",
+    "<C-v>": "eval:@@"
+  },
+  "suggest.noselect": true,
+  "coc.preferences.useQuickfixForLocations": true,
+  "suggest.echodocSupport": true,
+  "suggest.maxPreviewWidth": 80,
+  "suggest.maxCompleteItemCount": 20,
+  "sumneko-lua.enableNvimLuaDev": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "lua"],
+  "Lua.telemetry.enable": false
 }

@@ -27,7 +27,7 @@ export ANDROID_HOME=/data/apps_ressources/Android/Sdk
 
 ## Paths
 export PROG="$HOME/Work/prog/"
-export DOT="$HOME/dotfiles"
+export DOT="$HOME/work/dotfiles"
 export LFT="$HOME/42/libft/"
 export HOME_VID="$HOME/Videos"
 export HOME_PIC="$HOME/Pictures"

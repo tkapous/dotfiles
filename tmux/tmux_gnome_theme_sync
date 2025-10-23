@@ -12,9 +12,9 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
   fi
 fi
 
-default_theme="$HOME/dotfiles/tmux/colors/tokyonight_day"
-light_theme="$HOME/dotfiles/tmux/colors/tokyonight_day"
-dark_theme="$HOME/dotfiles/tmux/colors/tokyonight_moon"
+default_theme="$DOT/tmux/colors/tokyonight_day"
+light_theme="$DOT/tmux/colors/tokyonight_day"
+dark_theme="$DOT/tmux/colors/tokyonight_moon"
 
 switch_theme() {
   current_theme_mode=$(gsettings get org.gnome.desktop.interface color-scheme | tr -d "'")

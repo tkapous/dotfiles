@@ -5,4 +5,4 @@ else
 endif
 let g:UltiSnipsJumpForwardTrigger  = '<c-f>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-b>'
-let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = '~/dotfiles/vim/UltiSnips'
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = '$DOT/vim/UltiSnips'

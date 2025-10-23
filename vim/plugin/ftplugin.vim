@@ -3,7 +3,7 @@ if exists('g:plugin_ftplugin')
 endif
 let g:plugin_ftplugin = 1
 
-let g:ftplugin_path = get(g:, 'ftplugin_path', "~/dotfiles/vim/after/ftplugin/")
+let g:ftplugin_path = get(g:, 'ftplugin_path', "$DOT/vim/after/ftplugin/")
 
 command Ftplugin       exe printf("e %s.vim",      g:ftplugin_path.&filetype)
 command FtpluginVsplit exe printf("vs %s.vim",     g:ftplugin_path.&filetype)
