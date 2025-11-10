@@ -59,9 +59,10 @@ home_symbol = "~"
 truncation_length = 2
 truncation_symbol = " "
 truncate_to_repo = true
-read_only = " "
+read_only = " "
+read_only_style = "bg:bright-blue fg:red"
 style = "bg:bright-blue fg:blue"
-format = ' [](fg:bright-blue)[$path]($style)[$read_only]($read_only_style)[](fg:bright-blue)'
+format = ' [](fg:bright-blue)[$read_only]($read_only_style)[$path]($style)[](fg:bright-blue)'
 
 [status]
 disabled = false
