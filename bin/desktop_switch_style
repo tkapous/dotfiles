@@ -1,8 +1,32 @@
 #!/bin/bash
 
+
 current=$(gsettings get org.gnome.desktop.interface color-scheme)
 
 if [[ $current == "'prefer-dark'" ]]; then
+  status="dark"
+else
+  status="light"
+fi
+
+if [[ $1 == "status" ]]; then
+  echo $status
+  exit 0
+fi
+
+if [[ $1 == "is_dark" ]]; then
+  res=$([[ $status == "light" ]] && echo "0" || echo "1")
+  echo $res
+  exit $res
+fi
+
+if [[ $1 == "is_light" ]]; then
+  res=$([[ $status == "dark" ]] && echo "0" || echo "1")
+  echo $res
+  exit $res
+fi
+
+if [[ $status == "dark" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
   gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 else
