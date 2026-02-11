@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local M = wezterm.config_builder() or {}
 
 M = {
-	color_schemes = require("tokyonight"),
+	color_scheme = require("colorscheme").colorscheme,
 	enable_wayland = true,
 	line_height = 1.3,
 	window_padding = {
