@@ -1,7 +1,5 @@
 local M = {}
 
-local wezterm = require("wezterm")
-
 M.opacity = require("config").window_background_opacity
 M.default_opacity = nil
 
@@ -64,12 +62,10 @@ local function reset_opacity(window)
   window:set_config_overrides(overrides)
 end
 
-wezterm.on("dec-opacity", function(window) scale_window_opacity(window, false, onOpacityChange) end)
-
-wezterm.on("inc-opacity", function(window) scale_window_opacity(window, true, onOpacityChange) end)
-
-wezterm.on("toggle-opacity", toggle_opacity)
-
-wezterm.on("reset-opacity", reset_opacity)
+local on = require("wezterm").on
+on("dec-opacity", function(window) scale_window_opacity(window, false, onOpacityChange) end)
+on("inc-opacity", function(window) scale_window_opacity(window, true, onOpacityChange) end)
+on("toggle-opacity", toggle_opacity)
+on("reset-opacity", reset_opacity)
 
 return M
