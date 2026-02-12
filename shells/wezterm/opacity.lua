@@ -51,7 +51,7 @@ end
 --- @param up boolean
 --- @param onchange? function
 local function scale_window_opacity(window, up, onchange)
-  local overrides = window:get_config_overrides()
+  local overrides = window:get_config_overrides() or {}
   local opacity = overrides.window_background_opacity or M.opacity or 1
   M.opacity = opacity
   overrides.window_background_opacity = scale_opacity(opacity, up)
@@ -63,7 +63,7 @@ end
 
 ---@param window table
 local function toggle_opacity(window)
-  local overrides = window:get_config_overrides()
+  local overrides = window:get_config_overrides() or {}
   local opacity = overrides.window_background_opacity or M.opacity or 1
   overrides.window_background_opacity = opacity < 1 and 1 or M.opacity
   window:set_config_overrides(overrides)
@@ -71,7 +71,7 @@ end
 
 ---@param window table
 local function reset_opacity(window)
-  local overrides = window:get_config_overrides()
+  local overrides = window:get_config_overrides() or {}
   overrides.window_background_opacity = M.default_opacity or 1
   window:set_config_overrides(overrides)
 end
