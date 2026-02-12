@@ -1,11 +1,9 @@
-local M = {}
-
-M.opacity = require("config").window_background_opacity
-M.default_opacity = nil
+local _opacity = require("config").window_background_opacity
+local _default_opacity = nil
 
 local function onOpacityChange(opacity)
-  M.opacity = opacity
-  if M.default_opacity == nil then M.default_opacity = opacity end
+  _opacity = opacity
+  if _default_opacity == nil then _default_opacity = opacity end
 end
 
 ---@param value number
@@ -40,8 +38,8 @@ local function scale_opacity(opacity, up) return scale_value(opacity, scale_fact
 --- @param onchange? function
 local function scale_window_opacity(window, up, onchange)
   local overrides = window:get_config_overrides() or {}
-  local opacity = overrides.window_background_opacity or M.opacity or 1
-  M.opacity = opacity
+  local opacity = overrides.window_background_opacity or _opacity or 1
+  _opacity = opacity
   overrides.window_background_opacity = scale_opacity(opacity, up)
   window:set_config_overrides(overrides)
   if onchange then onchange(overrides.window_background_opacity) end
@@ -50,15 +48,15 @@ end
 ---@param window table
 local function toggle_opacity(window)
   local overrides = window:get_config_overrides() or {}
-  local opacity = overrides.window_background_opacity or M.opacity or 1
-  overrides.window_background_opacity = opacity < 1 and 1 or M.opacity
+  local opacity = overrides.window_background_opacity or _opacity or 1
+  overrides.window_background_opacity = opacity < 1 and 1 or _opacity
   window:set_config_overrides(overrides)
 end
 
 ---@param window table
 local function reset_opacity(window)
   local overrides = window:get_config_overrides() or {}
-  overrides.window_background_opacity = M.default_opacity or 1
+  overrides.window_background_opacity = _default_opacity or 1
   window:set_config_overrides(overrides)
 end
 
@@ -67,5 +65,3 @@ on("dec-opacity", function(window) scale_window_opacity(window, false, onOpacity
 on("inc-opacity", function(window) scale_window_opacity(window, true, onOpacityChange) end)
 on("toggle-opacity", toggle_opacity)
 on("reset-opacity", reset_opacity)
-
-return M
