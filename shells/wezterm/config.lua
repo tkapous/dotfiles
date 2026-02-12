@@ -4,6 +4,7 @@ local M = wezterm.config_builder() or {}
 
 M = {
 	color_scheme = require("colorscheme").colorscheme,
+	color_schemes = require("catppuccin"),
 	enable_wayland = true,
 	line_height = 1.3,
 	window_padding = {
