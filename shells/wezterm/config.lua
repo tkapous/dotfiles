@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local M = wezterm.config_builder() or {}
 
 M = {
-  color_scheme = require("colorscheme").colorscheme,
+  color_scheme = "Catppuccin Mocha",
   color_schemes = require("catppuccin"),
   enable_wayland = true,
   line_height = 1.3,
