@@ -7,17 +7,13 @@ M.default_opacity = nil
 
 local function onOpacityChange(opacity)
   M.opacity = opacity
-  if M.default_opacity == nil then
-    M.default_opacity = opacity
-  end
+  if M.default_opacity == nil then M.default_opacity = opacity end
 end
 
 ---@param value number
 ---@param min number
 ---@param max number
-local function minmax(value, min, max)
-  return math.min(math.max(value, min), max)
-end
+local function minmax(value, min, max) return math.min(math.max(value, min), max) end
 
 --- @param value number
 --- @param up boolean
@@ -32,20 +28,14 @@ end
 --- @param delta number
 local function scale_value(value, delta)
   value = value * delta
-  if value < 0.1 then
-    value = 0.1
-  end
-  if value > 0.995 then
-    value = 1
-  end
+  if value < 0.1 then value = 0.1 end
+  if value > 0.995 then value = 1 end
   return value
 end
 
 --- @param opacity number
 --- @param up boolean
-local function scale_opacity(opacity, up)
-  return scale_value(opacity, scale_factor(opacity, up))
-end
+local function scale_opacity(opacity, up) return scale_value(opacity, scale_factor(opacity, up)) end
 
 --- @param window table
 --- @param up boolean
@@ -56,9 +46,7 @@ local function scale_window_opacity(window, up, onchange)
   M.opacity = opacity
   overrides.window_background_opacity = scale_opacity(opacity, up)
   window:set_config_overrides(overrides)
-  if onchange then
-    onchange(overrides.window_background_opacity)
-  end
+  if onchange then onchange(overrides.window_background_opacity) end
 end
 
 ---@param window table
@@ -76,13 +64,9 @@ local function reset_opacity(window)
   window:set_config_overrides(overrides)
 end
 
-wezterm.on("dec-opacity", function(window)
-  scale_window_opacity(window, false, onOpacityChange)
-end)
+wezterm.on("dec-opacity", function(window) scale_window_opacity(window, false, onOpacityChange) end)
 
-wezterm.on("inc-opacity", function(window)
-  scale_window_opacity(window, true, onOpacityChange)
-end)
+wezterm.on("inc-opacity", function(window) scale_window_opacity(window, true, onOpacityChange) end)
 
 wezterm.on("toggle-opacity", toggle_opacity)
 

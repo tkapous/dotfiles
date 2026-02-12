@@ -6,5 +6,5 @@ local catppuccin_mocha = schemes["Catppuccin Mocha"]
 catppuccin_mocha.background = "#0b0f14"
 
 return {
-	["Catppuccin Mocha"] = catppuccin_mocha,
+  ["Catppuccin Mocha"] = catppuccin_mocha,
 }
