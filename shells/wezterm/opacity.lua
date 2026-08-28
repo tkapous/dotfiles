@@ -14,7 +14,7 @@ local function minmax(value, min, max) return math.min(math.max(value, min), max
 --- @param value number
 --- @param up boolean
 local function scale_factor(value, up)
-  local scale = (1 - value) * 0.1
+  local scale = (1 - value) * 0.5
   scale = minmax(scale, 0.005, 0.99)
   scale = up and scale or -scale
   return 1 + scale
