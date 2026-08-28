@@ -23,9 +23,11 @@ end
 --- @param value number
 --- @param delta number
 local function scale_value(value, delta)
+  if value < 0 then value = 0.001 end
+  if value > 1 then value = 0.999 end
   value = value * delta
-  if value < 0.1 then value = 0.1 end
-  if value > 0.995 then value = 1 end
+  if value < 0.001 then value = 0.001 end
+  if value > 0.999 then value = 0.999 end
   return value
 end
 
