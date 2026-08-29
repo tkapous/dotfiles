@@ -1,11 +1,11 @@
-local wezterm = require("wezterm")
+local wezterm = require('wezterm')
 
 local themes = {
-  Default = "Catppuccin Latte",
-  Light = "Catppuccin Latte",
-  Dark = "Catppuccin Mocha",
-  LightHighContrast = "Catppuccin Latte",
-  DarkHighContrast = "Catppuccin Mocha",
+  Default = 'Catppuccin Latte',
+  Light = 'Catppuccin Latte',
+  Dark = 'Catppuccin Mocha',
+  LightHighContrast = 'Catppuccin Latte',
+  DarkHighContrast = 'Catppuccin Mocha',
 }
 
 local function change_theme(window)
@@ -18,4 +18,4 @@ local function change_theme(window)
   end
 end
 
-wezterm.on("window-config-reloaded", change_theme)
+wezterm.on('window-config-reloaded', change_theme)
