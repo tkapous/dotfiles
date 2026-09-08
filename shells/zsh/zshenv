@@ -7,7 +7,7 @@
 
 if [ -x "$(command -v nvim)" ]; then
   export VISUAL=(nvim)
-  export MANPAGER="nvim +Man!"
+  export MANPAGER="nvim -c 'set signcolumn=no | set winbar="" | set statusline="" | set statuscolumn="" | set tabline="" | set statuscolumn="" ' +Man!"
 else
   export VISUAL=(vim -X)
   export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 readonly nomodified nomodifiable' -\""
