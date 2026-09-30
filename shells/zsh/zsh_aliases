@@ -362,7 +362,7 @@ fi
 # alias fzf='fzf --color="dark" --tabstop=4'
 # alias fd='fd ~'
 alias lcmd='echo "$(fc -ln -1)" | sed "s/^ *//"'
-alias lcmdcp='echo "$(fc -ln -1)" | tr '\''\n'\'' '\'' '\'' | cip'
+alias lcmdcp='echo "$(fc -ln -1)" | tr '\''\n'\'' '\'' '\'' | xsel -b'
 alias lcmdalias='echo "$(fc -ln -1)" | sed "s/^. *//" >> $DOT/bash_aliases'
 alias hg='history | grep'
 alias hx='eval $(history | sed "s/^ *[0-9]* *//" | fzf)'
