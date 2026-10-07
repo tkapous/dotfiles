@@ -44,6 +44,7 @@ export QT_QPA_PLATFORM=wayland
 ## PATH
 export GOPATH=$HOME/bin/go
 export PATH=$PATH:$HOME/bin
+PATH+=:$HOME/.local/bin
 PATH+=:$HOME/bin/tmux
 PATH+=:$HOME/bin/git
 PATH+=:/usr/lib
